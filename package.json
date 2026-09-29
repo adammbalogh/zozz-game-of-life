@@ -1,0 +1,8 @@
+{
+  "name": "zozz-game-of-life",
+  "private": true,
+  "description": "Conway életjátéka statikus oldalként – a zozz-coder demója",
+  "scripts": {
+    "test": "node --test"
+  }
+}
