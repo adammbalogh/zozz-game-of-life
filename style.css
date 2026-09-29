@@ -27,12 +27,27 @@ body {
 
 #app { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 
-.placeholder {
-  margin: 0;
-  padding: 48px 64px;
-  border: 2px dashed var(--line);
-  border-radius: 12px;
-  color: var(--muted);
+/* 30 × 30 cells: at most 540px wide, narrower on small screens (32px = the body's side padding). */
+.board {
+  display: grid;
+  grid-template-columns: repeat(30, minmax(0, 1fr));
+  grid-template-rows: repeat(30, minmax(0, 1fr));
+  gap: 1px;
+  width: min(540px, calc(100vw - 32px));
+  aspect-ratio: 1;
+  background: var(--line);
+  border: 1px solid var(--line);
 }
+
+.cell {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+}
+
+.cell.alive { background: var(--ink); }
+.cell:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
 
 footer { margin-top: auto; color: var(--muted); font-size: 14px; }
