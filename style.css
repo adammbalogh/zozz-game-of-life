@@ -50,4 +50,18 @@ body {
 .cell.alive { background: var(--ink); }
 .cell:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
 
+.step {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.step:hover { background: var(--blue); }
+.step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
 footer { margin-top: auto; color: var(--muted); font-size: 14px; }
